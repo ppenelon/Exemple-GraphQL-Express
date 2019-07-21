@@ -61,4 +61,5 @@ mutation {
 
 - La classe `GraphQLID` traduit en `string` et non en `number`.
 - Vulnérabilité possible avec les relations imbriquées.
-- Il n'est pas possible de retourner une instance d'un modèle (comme Auteur) ou un tableau d'instances dans la même requête. En effet, le type (Object ou Array<Object>) est défini dans le schéma et ne peut pas être multiple.
+- Il n'est pas possible de retourner une instance d'un modèle (comme Auteur) ou un tableau d'instances dans la même requête. En effet, le type (Object ou Array<Object>) est défini dans le schéma et ne peut pas être multiple.   
+  Une alternative consiste à créer une requête *Author* (qui prendrait l'ID en argument) et une requête *Authors*, qui retourneraient respectivement l'instance d'un modèle Auteur et un tableau d'instances du modèle Auteur.
